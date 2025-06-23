@@ -10,8 +10,9 @@ public class OperacionServiceTest {
 
     @Test
     public void testProcesarOperacion() {
-        Calculadora calc = new Calculadora();
-        OperacionService service = new OperacionService(calc);
+        //Calculadora calc = new Calculadora(); // no se necesita cuando los metodos(sumar,restar) son estáticos
+        //OperacionService service = new OperacionService(calc);
+        OperacionService service = new OperacionService(); // usando clase estática
         assertEquals(10, service.procesarOperacion(2, 3));
     }
 
